@@ -128,9 +128,25 @@ def date(päev: int, kuu: int, aasta: int):
     return v
 
 
+#Ülesanne 8
 
+def XOR_cipher(v, key):
+    tet1 = ""
+    for i in range(len(v)):
+        
+        tet11 = chr(ord(v[i]) ^ ord(key[i % len(key)]))
+        tet1 += tet11
+    
+    return tet1
 
-
+def XOR_uncipher(tet1, key):
+    tet2 = ""
+    for i in range(len(tet1)):
+        
+        tet22 = chr(ord(tet1[i]) ^ ord(key[i % len(key)]))
+        tet2 += tet22
+    
+    return tet2
 
 
 
